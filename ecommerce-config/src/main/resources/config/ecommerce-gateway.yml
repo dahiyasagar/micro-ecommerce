@@ -1,0 +1,31 @@
+server:
+  port: 8060
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8061/eureka/
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      - id: ecommerce-app
+        uri: lb://ecommerce-app
+        predicates:
+        - Path=/app/**
+        filters:
+        - RewritePath=/app/(?<path>.*), /$\{path}
+      - id: ecommerce-catalog
+        uri: lb://ecommerce-catalog
+        predicates:
+        - Path=/product/**
+        filters:
+        - RewritePath=/product/(?<path>.*), /$\{path}
+      - id: ecommerce-order
+        uri: lb://ecommerce-order
+        predicates:
+        - Path=/order/**
+        filters:
+        - RewritePath=/order/(?<path>.*), /$\{path}

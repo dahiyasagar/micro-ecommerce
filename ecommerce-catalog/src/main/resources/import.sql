@@ -1,0 +1,9 @@
+insert into product (id, name, price) values (1, 'Black Shirt', '26.00');
+insert into product (id, name, price) values (2, 'Red Shirt', '15.00');
+insert into product (id, name, price) values (3, 'Green Shirt', '18.00');
+insert into product (id, name, price) values (4, 'Black Hat', '32.00');
+insert into product (id, name, price) values (5, 'Brown Hat', '48.00');
+insert into product (id, name, price) values (6, 'White Hat', '104.00');
+insert into product (id, name, price) values (7, 'Yellow Shorts', '110.00');
+insert into product (id, name, price) values (8, 'Black Shorts', '168.00');
+insert into product (id, name, price) values (9, 'Pink Shorts', '67.00');
